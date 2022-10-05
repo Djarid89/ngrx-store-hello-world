@@ -5,18 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {StoreModule} from "@ngrx/store";
 import {heroReducer} from "./heroes/reducers/hero-reducer";
-import { ReadDeleteComponent } from './heroes/components/read-delete/read-delete.component';
 import { CreateComponent } from './heroes/components/create/create.component';
+import { DetailsComponent } from './heroes/components/details/details.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ReadDeleteComponent,
-    CreateComponent
+    CreateComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonModule,
+    FormsModule,
     StoreModule.forRoot(
       { heroes: heroReducer }
     )

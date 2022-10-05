@@ -109,6 +109,7 @@
   },
   "defaultProject": "ngrx-store-hello-world",
   "cli": {
+    "analytics": false,
     "defaultCollection": "@ngrx/schematics"
   }
 }

@@ -1,8 +1,16 @@
-<!--create.component.html-->
 <div>
   <input placeholder="name" #name>
   <input placeholder="description" #description>
   <button (click)="addHero(name.value, description.value)">Add Hero</button>
 </div>
-
+<div class="right" *ngIf="heroes">
+  <h3>Heroes</h3>
+  <ul>
+    <li *ngFor="let hero of heroes | async; let i = index">
+    {{ hero.name }}: {{ hero.description }}
+      <button (click)="deleteHero(i)">delete</button>
+      <button *ngIf="detailsBtn" (click)="heroDetails(hero)">details</button>
+    </li>
+  </ul>
+</div>
 

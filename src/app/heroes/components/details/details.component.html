@@ -1,0 +1,11 @@
+<h1>Hero's details</h1>
+<div>Name: {{name}}</div>
+<div>Description: {{description}}</div>
+<div>&nbsp;</div>
+<h1>Modify Hero's details</h1>
+<div>Name: <input [(ngModel)]="name" (ngModelChange)="updateHero()" /></div>
+<div>Description: <input [(ngModel)]="description" (ngModelChange)="updateHero()" /></div>
+<div>&nbsp;</div>
+<h1>Modify list of heroes</h1>
+<app-create [detailsBtn]="false"></app-create>
+<button (click)="back()">BACK</button>
